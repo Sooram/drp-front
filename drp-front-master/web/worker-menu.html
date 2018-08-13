@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Worker - Menu</title>
+    <!--web-fonts-->
+    <link href="https://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet">
+    <!--//web-fonts-->
+    <style>
+    .container {
+        width: 100%;
+        padding-top: 15%;
+        margin-right: auto;
+        margin-left: auto;
+        
+    }
+    body {
+        font-family: 'Jeju Gothic', sans-serif;
+        background: #6E0406;
+    }
+    .ml-auto, .mx-auto {
+        margin-left: auto!important;
+    }
+    .mr-auto, .mx-auto {
+        margin-right: auto!important;
+    }
+    .mb-5, .my-5 {
+        margin-bottom: 3rem!important;
+    }
+    .d-block {
+        display: block!important;
+    }
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+    img {
+        vertical-align: middle;
+        border-style: none;
+    }
+    .footer {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+    }
+
+    p {
+        color: white;
+        text-align: center;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #e2e2e2;
+        border: 0;
+        line-height: 2.5em;
+        padding: 0 0 0 1em;
+        margin-bottom: 1em;
+        outline: none;
+        text-decoration: none;
+        color: #666;
+        font-size: 1.6em;
+    }
+    .btn .arrow {
+        display: inline-block;
+        line-height: 2.5em;
+        text-align: center;
+        background: #c89F43;
+        color: white;
+        font-size: 1em;
+        width: 2.5em;
+        transition: margin 200ms;
+        margin-left: .75em;
+    }
+    .btn:active {
+        background: #ccc;
+        
+    }
+    .arrow:active {
+        margin-left: 1.5em;
+        background-color:#B48F3C;
+        /* background-color: desaturate(darken(#c89F43,15%),15%); */
+    } 
+
+    .menu {
+        text-align: center;
+        padding-top: 1em;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img-fluid mb-5 d-block mx-auto" src="images/icon.png" alt="icon" height='256' width='256'>
+    </div>
+    <div class="menu">
+        <a href="worker-workInfo.html" class="btn">업무 조회 <span class="arrow">❯</span></a>
+        <a href="worker-attendance.html" class="btn">출결 관리 <span class="arrow">❯</span></a>
+    </div>
+    <div class="footer">
+        <p>- KGC인삼공사 -</p>
+    </div>
+</body>
+
+
