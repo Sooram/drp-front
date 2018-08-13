@@ -94,9 +94,10 @@ input[type="submit"],.wthree_footer_copy p a,.top-nav ul li a,.agile_main_grid_l
 	width:30%;
 	margin:0 auto;
 }
-.agile_main_grid_left{
+/* .agile_main_grid_left{
 	position: relative;
-}
+	font-family: 'Jeju Gothic', sans-serif;
+} */
 /*-- social-icons --*/
 ul.w3-links li {
 	/* margin: 0 0.5em; */
@@ -139,7 +140,7 @@ i.fa.fa-linkedin{
 	color:#0077b5;
 }
 i.fa.fa-google-plus{
-	color:#d34836;
+	color:#6E0406;
 }
 ul.w3-links li a i.fa:hover {
 	color: #333;
@@ -151,19 +152,17 @@ ul.w3-links li a i.fa:hover {
 }
 /*-- //social-icons --*/
 /*-- //menu --*/
-.agile_main_grid_left1{
+/* .agile_main_grid_left1{
 	padding:1em 0;
-	/* background:rgba(13, 183, 196, 0.8); */
-	background: #d71921;
+	background: #6E0406;
 	text-align:center;
 }
 .agile_main_grid_left1 h2{
 	font-size:1.3em;
 	color:#fff;
 	letter-spacing: 1px;
-}
+} */
 .agile_main_grid_left2{
-	padding:2em;
 	text-align:center;
 	background:#fff;
 }
@@ -181,7 +180,7 @@ ul.w3-links li a i.fa:hover {
 	text-decoration:none;
 }
 .agile_main_grid_left2 h3 a:hover{
-	color:#ed4406;
+	color:#6E0406;
 }
 .agile_main_grid_left2 img {
 	/**/
@@ -204,7 +203,7 @@ ul.w3-links li a i.fa:hover {
     border-width: 1px 0;
 	/* margin: 2em 0; */
 	margin: 2em 0;
-	margin-bottom: 2.5em;
+	margin-bottom: 1.5em;
 }
 .agile_main_grid_left2_grid_left{
 	float:left;
@@ -212,7 +211,7 @@ ul.w3-links li a i.fa:hover {
 }
 .agile_main_grid_left2_grid_left h4{
 	font-size:1.2em;
-	color:#e4635e;
+	color:#6E0406;
 }
 /*-- w3layouts --*/
 .agile_main_grid_left2_grid_left h5{
@@ -234,7 +233,7 @@ ul.w3-links li a i.fa:hover {
 	/* font-size:1em; */
 	font-size:1.2em;
 	/* background:rgba(13, 183, 196, 0.8); */
-	background: #d71921;
+	background: #6E0406;
 	display:block;
 }
 .agile_main_grid_left2_grid_bottom a:hover{
@@ -250,7 +249,7 @@ menu_button{
 	padding:10px 0px;
 	color:#fff;
 	font-size:1.2em;
-	background: #d71921;
+	background: #6E0406;
 	display:block;
 }
 .menu_button a:hover{
@@ -356,7 +355,8 @@ menu_button{
 		width: 90%;
 	}
 	.agile_main_grid_left2 {
-		padding: 1.5em 1em;
+		padding: 1em;
+		padding-bottom: 0;
 	}
 	.agile_main_grid_left2_grid_left h4 {
 		/* font-size: 1em; */

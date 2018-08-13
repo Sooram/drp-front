@@ -2203,7 +2203,7 @@ ul.percentg-circles-w3ls .chart .figure {
 .agile_main_grid_left1{
 	padding:1em 0;
 	/* background:rgba(13, 183, 196, 0.8); */
-	background: rgba(195,30,30);
+	background: #6E0406;
 	text-align:center;
 }
 .agile_main_grid_left1 h2{
@@ -2220,9 +2220,10 @@ ul.percentg-circles-w3ls .chart .figure {
 		font-size: 1.3em;
 	}
 	.agile_main_grid_left2_grid_bottom a {
-		padding: 6px 0px;
 		/* font-size: 14px; */
 		font-size: 1.3em;
+		margin-bottom: 1.5em;
+
 	}
 	.agile_main_grid_left2_grid_bottom {
 		width: 50%;
