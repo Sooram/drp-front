@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link href="https://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet">
+<title>QR Code Scanner Example</title>
+</head>
+<body>
+	
+			
+		<br><br>
+
+		<div id="qr" style="display: inline-block; width: 800px; height: 800px; margin: 100px; border: 1px solid silver"></div>
+		<br><br>
+		<div class="container" style="text-align: center">
+			<button class="btn btn-style my-2 my-sm-0" id="scan" style="font-size:3em; font-family: 'Jeju Gothic', sans-serif;">start scaning</button>
+			<button class="btn btn-style my-2 my-sm-0 disabled" id="stop" style="font-size:3em; font-family: 'Jeju Gothic', sans-serif;">stop scanning</button>
+			<button class="btn btn-style my-2 my-sm-0 disabled" id="change" style="font-size:3em; display:block; margin: 0 auto; font-family: 'Jeju Gothic', sans-serif;">change camera</button>
+		<br><br>
+	</div>
+</body>
+
+<script src="js/jquery.js"></script>
+<script src="js/jsqrcode-combined.js"></script>
+<script src="js/html5-qrcode.js"></script>
+<script>
+$(document).ready(function() {
+	$("#scan").on('click', function() {
+		$("code").html('scanning');
+		$('#qr').html5_qrcode(function(data){
+		         // do something when code is read
+		         $(".feedback").html('code scanned as: ' +data);
+		    },
+		    function(error){
+		        //show read errors 
+		        $(".feedback").html('Unable to scan the code! Error: ' +error)
+		    }, function(videoError){
+		        //the video stream could be opened
+		        $(".feedback").html('Video error');
+		    }
+		);
+
+		$("#scan").addClass('disabled');
+		$("#stop").removeClass('disabled');
+		$("#change").removeClass('disabled');
+	});
+	$("#stop").on('click', function() {
+		$("#qr").html5_qrcode_stop();
+		$("code").html('Start Scanning');
+
+		$("#scan").removeClass('disabled');
+		$("#stop").addClass('disabled');
+		$("#change").addClass('disabled');
+	});
+	$("#change").on('click', function() {
+		$("#qr").html5_qrcode_changeCamera();
+
+		$("#scan").addClass('disabled');
+		$("#stop").removeClass('disabled');
+	});
+});
+	
+</script>
+</html>
