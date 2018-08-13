@@ -47,15 +47,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<div class="agile_main_grid_left2_grid">
 										<div class="agile_main_grid_left2_grid_left">
 											<h4>날짜</h4>
-											<h5>18.08.09</h5>
+											<h5 id='date'></h5>
 										</div>
 										<div class="agile_main_grid_left2_grid_left">
 											<h4>출근 시간</h4>
-											<h5>8:45</h5>
+											<h5 id='hiTime'></h5>
 										</div>
 										<div class="agile_main_grid_left2_grid_left">
 											<h4>퇴근 시간</h4>
-											<h5>18:03</h5>
+											<h5 id='byeTime'></h5>
 										</div>
 										<div class="clear"> </div>
 									</div>
@@ -78,4 +78,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!--// Copyright -->
 </div>
 </body>
+<script src="js/jquery.js"></script>
+<script>
+$(document).ready(function() {
+	var today = getDate();
+	console.log(today);
+	$("#date").html(today);
+	//////////////////////////////////////////////////db에서 불러 오기
+	var hiTime = localStorage.getItem("hiTime");
+	$("#hiTime").html(hiTime);
+	var byeTime = localStorage.getItem("byeTime");
+	$("#byeTime").html(hiTime);
+	//////////////////////////////////////////////////
+});
+
+function getDate() {
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; 
+	var yy = today.getYear()-100;
+	// var yyyy = today.getFullYear();
+	if(dd<10){
+		dd='0'+dd;
+	} 
+	if(mm<10){
+		mm='0'+mm;
+	} 
+	today = yy + '/' + mm + '/' + dd;
+	
+	return today;
+}
+function formatTime(t) {
+	h = (t.getHours()<10?'0':'') + t.getHours(),
+	m = (t.getMinutes()<10?'0':'') + t.getMinutes();
+	
+	return h + ':' + m;
+}
+</script>
 </html>
